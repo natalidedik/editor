@@ -1,0 +1,17 @@
+<table class="table">
+    <thead class="thead-inverse">
+        <tr>
+            <th>Item Name</th>
+            <th>Edit Item</th>
+            <th>Remove Item</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr ng-repeat="todo in todos track by $index">
+            <td>{{ todo.text }}</td>
+            <td><a ui-sref="edit({ partyID: todo.id})">edit</a></td>
+            <td><a href ng-click="remove({index: $index})">remove</a></td>
+        </tr>
+    </tbody>
+</table>
